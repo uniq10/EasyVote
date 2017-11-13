@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Local Body</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+</head>
+
+<body>
+
+  <h1>Create Yes/No Poll</h1><br>
+  <label for="yesNoQs">Question: </label>
+  <input type="text" id="yesNoQs"></input><br>
+  <label for="yesNoDeadline">Deadline: </label>
+  <input type="number" id="yesNoDeadline"></input><br>
+
+  <button id="createYesNoQs" onclick="App.createYesNoQs()">Create Poll</button><br>
+
+  <br><br>
+  <h1>Create Poll</h1><br>
+  <label for="MCQs">Question: </label>
+  <input type="text" id="MCQs"></input><br>
+  <span id="optionsDiv">
+    <label for="MCQOpt1">Option 1: </label>
+    <input type="text" id="MCQOpt1"></input><br>
+    <label for="MCQOpt2">Option 2: </label>
+    <input type="text" id="MCQOpt2"></input><br>
+  </span>
+
+  <label for="MCQDeadline">Deadline: </label>
+  <input type="number" id="MCQDeadline"></input><br>
+
+  <button id="createMCQs" onclick="App.createMCQs()">Create Poll</button>
+  <button id="addOption" onclick="App.addOption()">Add Option</button>
+  <button id="removeOption" onclick="App.removeOption()">Remove Option</button><br>
+
+  <br><br>
+  <span id="viewStatus" style="font-weight: bold;">STATUS:</span><br>
+  <span id="status"></span>
+
+</body>
+</html>

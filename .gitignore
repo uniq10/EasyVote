@@ -1,0 +1,5 @@
+__pycache__/
+build/
+node_modules/
+*.pyc
+package-lock.json

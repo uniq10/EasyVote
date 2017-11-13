@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Voter</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+  <script>
+    var getUrlParameter = function getUrlParameter(sParam) {
+      var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+      for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+      }
+    };
+    window.onload = function() {
+        var voter = getUrlParameter('id');
+        var ques = getUrlParameter('ques');
+        var pageType = getUrlParameter('type');
+        App.setPollQuestion(ques);
+        if(pageType == "result") {
+            App.showResults();
+        } else {
+            var elem = document.getElementById("mainDiv");
+            elem.innerHTML = "<span id=\"options\"></span><br>"
+                    + "<span id=\"vote\"><span><br>";
+            App.fillOptions(voter, ques);
+        }
+    };
+  </script>
+</head>
+
+<body>
+
+  <h1><span id="poll"></span></h1><br>
+
+  <span id="mainDiv"></span>
+  <!--<span id="options"></span><br>
+  <span id="vote"></span><br>-->
+
+  <p id="viewStatus" style="font-weight: bold;">RESULTS:</p>
+  <span id="status"></span>
+
+</body>

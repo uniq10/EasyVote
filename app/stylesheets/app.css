@@ -1,0 +1,52 @@
+body {
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 2%;
+  font-family: "Open Sans", sans-serif;
+}
+
+label {
+  display: inline-block;
+  padding: 5px;
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+input[type=text], input[type=number] {
+  width: 500px;
+  padding: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+button {
+  font-size: 16px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+h1, h2 {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+div {
+  position: fixed;
+  bottom: 0;
+  width: 50%;
+  text-align:right;
+}
+
+.black {
+  color: black;
+}
+
+#balance {
+  color: black;
+}
+
+.hint {
+  color: #666;
+}
